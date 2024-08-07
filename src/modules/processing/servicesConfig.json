@@ -114,6 +114,12 @@
             "patterns": ["video/:id"],
             "enabled": true
         },
+        "today": {
+            "alias": "today videos",
+            "patterns": ["video/:id"],
+            "enabled": true,
+            "subdomain": "www"
+        },
         "loom": {
             "alias": "loom videos",
             "patterns": ["share/:id"],

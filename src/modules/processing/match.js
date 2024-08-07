@@ -24,6 +24,7 @@ import streamable from "./services/streamable.js";
 import twitch from "./services/twitch.js";
 import rutube from "./services/rutube.js";
 import dailymotion from "./services/dailymotion.js";
+import today from "./services/today.js";
 import loom from "./services/loom.js";
 
 let freebind;
@@ -78,6 +79,11 @@ export default async function(host, patternMatch, lang, obj) {
                 r = await ok({
                     id: patternMatch.id,
                     quality: obj.vQuality
+                });
+                break;
+            case "today":
+                r = await today({
+                    id: patternMatch.id
                 });
                 break;
             case "bilibili":
